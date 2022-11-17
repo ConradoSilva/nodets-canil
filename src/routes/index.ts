@@ -5,10 +5,6 @@ import * as SearchController from '../controllers/searchController';
 
 const router = Router();
 
-router.get('/', (req, res) => {
-    res.send('Página principal');
-});
-
 router.get('/', PageController.home);
 router.get('/dogs', PageController.dogs);
 router.get('/cats', PageController.cats);

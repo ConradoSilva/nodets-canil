@@ -20,6 +20,6 @@ server.use(mainRoutes);
 
 server.use((req, res)=>{
     res.send('Página não encontrada');
-})
+});
 
-server.listen(8080);
+server.listen(4000);
