@@ -1,0 +1,15 @@
+{{>partials/header}}
+    <div class="container">
+        
+        <h2>Seu ano de nascimento:</h2>
+        <form method="POST" action="routesPost">
+            <input type="number"  name ="anos" placeholder="ano de nascimento"/>
+            <input type="submit" value="Enviar"/>
+        </form>
+    
+    {{#anoBoolean}}<br><br><div>Você possui {{result}} anos de idade.</div>{{/anoBoolean}} 
+
+    </div>
+</header>
+
+{{> partials/footer}}

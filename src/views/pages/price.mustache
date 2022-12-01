@@ -1,0 +1,18 @@
+{{>partials/header}}
+
+<h2>Olá {{list.name}} você tem {{list.age}} anos.</h2>
+
+<hr><br><br>
+
+<ul>
+        {{#products}}
+             {{>partials/itensLoop}}
+        {{/products}}
+</ul>
+
+{{>partials/footer}}
+
+
+
+    
+

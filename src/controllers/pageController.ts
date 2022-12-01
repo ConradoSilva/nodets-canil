@@ -1,8 +1,9 @@
 import { Request, Response } from 'express';
 import { createMenuObject } from '../helpers/createMenuObject';
 import { Pet } from '../models/pet';
+import { listProduct } from '../models/pricesDB';
 
-export const home = (req:Request, res:Response)=> {
+export const home = (req:Request, res:Response) => {
     let list = Pet.getAll();
     res.render('pages/page',{
         menu: createMenuObject(''),
@@ -14,7 +15,7 @@ export const home = (req:Request, res:Response)=> {
     });
 };
 
-export const dogs = (req:Request, res:Response)=> {
+export const dogs = (req:Request, res:Response) => {
     let list = Pet.getFromType('dog');
 
     res.render('pages/page',{
@@ -27,7 +28,7 @@ export const dogs = (req:Request, res:Response)=> {
     });
 };
 
-export const cats = (req:Request, res:Response)=> {
+export const cats = (req:Request, res:Response) => {
     let list = Pet.getFromType('cat');
 
     res.render('pages/page',{
@@ -40,7 +41,7 @@ export const cats = (req:Request, res:Response)=> {
     });
 };
 
-export const fishes = (req:Request, res:Response)=> {
+export const fishes = (req:Request, res:Response) => {
     let list = Pet.getFromType('fish');
 
     res.render('pages/page',{
@@ -52,4 +53,22 @@ export const fishes = (req:Request, res:Response)=> {
         list
     });
 };
+
+export const price = (req:Request, res:Response) => {
+
+    let pList = listProduct.getAll;
+    let filterList = listProduct.getListFilter(80);
+
+    res.render('pages/price',{
+        menu:createMenuObject('price'),
+        products: filterList,
+        list: pList
+    });
+};
+
+
+export const idade = (req:Request, res:Response) => {
+    res.render('pages/idade');
+};
+
 

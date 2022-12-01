@@ -1,11 +1,13 @@
 type PetType = 'dog' | 'cat' | 'fish';
+type Genre = 'Masculino' | 'Feminino';
+
 type Pet = {
     type: PetType,
     image: string,
     name:  string,
     color: string,
-    sex: 'Masculino' | 'Feminino'
-}
+    sex: Genre
+};
 
 const data: Pet[] = [
     {
