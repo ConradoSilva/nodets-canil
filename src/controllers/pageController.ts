@@ -57,12 +57,16 @@ export const fishes = (req:Request, res:Response) => {
 export const price = (req:Request, res:Response) => {
 
     let pList = listProduct.getAll;
-    let filterList = listProduct.getListFilter(80);
+    let filterList = listProduct.getListFilter(0);
 
     res.render('pages/price',{
         menu:createMenuObject('price'),
         products: filterList,
-        list: pList
+        list: pList,
+        banner:{
+            tittle:'Preços',
+            background:'blackFriday.jpg'
+            },
     });
 };
 

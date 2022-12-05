@@ -5,7 +5,7 @@ export const anoPost = (req:Request, res:Response) => {
     let result: number = 0;
     let anoBoolean: boolean = false;
 
-    console.log(req.body);
+    console.log(req.body.anos);
 
     if(req.body.anos){
         let anoNascimento: number = parseInt(req.body.anos as string);

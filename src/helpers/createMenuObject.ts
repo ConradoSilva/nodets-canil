@@ -10,6 +10,8 @@ export const createMenuObject = (activeMenu: MenuOptions) => {
         price:false,
         idade: false     
     };
+
+    
     activeMenu !== '' ? returnObject[activeMenu] = true : returnObject;
     
 };

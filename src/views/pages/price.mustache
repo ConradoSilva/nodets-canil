@@ -1,6 +1,10 @@
 {{>partials/header}}
 
-<h2>Olá {{list.name}} você tem {{list.age}} anos.</h2>
+{{#banner}}
+<section class="banner" style="background-image: url('images/{{ background }}')">{{ title }}</section>
+
+<h2>{{title}} disponiveis para adoção</h2>
+{{/banner}}
 
 <hr><br><br>
 
